@@ -9,38 +9,50 @@ $(document).ready(function(){
 	$("#four").hide();
 
 	$(".chevronLink").click(function(){
-		var slideDownID = $(this).data("item")
+		var slideDownID = $(this).data("item");
 
-		console.log($(this).data("item"));	
+        //sets active class on click
+		$(".chevronLink").removeClass("active");
+        $(this).addClass("active");
+
 		switch(slideDownID){
-			case 1:
-				$("#Landing-page").slideUp();
-				$("#one").slideDown(); 	
+            case 1:
+				$("#one").slideDown();
+                $("#Landing-page").slideUp();
 				$("#two").slideUp(); 	
 				$("#three").slideUp(); 	
 				$("#four").slideUp();
 				break;
 			case 2:
-				$("#Landing-page").slideUp();
-				$("#two").slideDown(); 	
+				$("#two").slideDown();
+                $("#Landing-page").slideUp();
 				$("#one").slideUp(); 
 				$("#three").slideUp(); 	
 				$("#four").slideUp();
 				break;
 			case 3:
-				$("#Landing-page").slideUp();	
 				$("#three").slideDown();
-				$("#one").slideUp(); 	
+                $("#Landing-page").slideUp();
+                $("#one").slideUp();
 				$("#two").slideUp(); 	
 				$("#four").slideUp();
 				break;
 			case 4:
-				$("#Landing-page").slideUp();
 				$("#four").slideDown();
+                $("#Landing-page").slideUp();
 				$("#one").slideUp(); 	
 				$("#two").slideUp(); 	
 				$("#three").slideUp(); 	
 				break;
+			default://scrolls and returns to landing page
+                $("#Landing-page").slideDown();
+                $("#one").slideUp();
+                $("#two").slideUp();
+                $("#three").slideUp();
+                $("#four").slideUp();
+                break;
 		}
+		
+		$("html, body").animate({ scrollTop: 0 }, 500);
 	});
 });
