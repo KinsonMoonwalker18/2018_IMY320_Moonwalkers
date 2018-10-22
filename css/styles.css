@@ -2,34 +2,50 @@
 	font-family: 'Titillium Web', sans-serif;
 }
 
+@font-face{
+    font-family: 'Digital';
+    src: url('../fonts/digital.ttf');
+}
+
+@font-face{
+    font-family: 'moonwalkerTitle';
+    src: url('../fonts/Potra.ttf');
+}
+
 div#Landing-page{
 	width: 100%;
 	height:  100%;
 	background-color: white;
-	text-align: center;
+	padding-top: 0px;
 }
 div#Landing-page>img{
-	/*width: 100%;*/
-	height:700px;
-	/*background-color: white;*/
-	/*text-align: center;*/
+	width: 100%;
 }
 img#banner{
 	margin: 0, auto;
 }
 h1{
+    font-family: 'Digital';
+    text-shadow: 2px 2px #006600;
 	text-align: center;
 	color: white;
 	font-size: 42px;
 
 }
-div{
-	/*position: fixed;*/
-	/*top: -47px;*/
-	height:1080px;
-	padding-top: 30px;
+
+h2{
+	display: inline-block;
+	text-shadow: 2px 2px #006600;
+	color: white;
+	font-size: 17px;
+	margin-right: 10px;
 }
 
+strong {
+	font-family: 'moonwalkerTitle';
+	font-weight: lighter;
+	font-size: 25px;
+}
 
 /*------Nav Bar CSS------------------------*/
 #nav-bar-div{
@@ -37,16 +53,15 @@ div{
 	height: 47px;
 	text-align: center;
 	z-index: 1;
-	box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+	/*box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);*/
 	margin-bottom: 0px;
 	padding-top: 0;
-	top:0px;
+	top:7px;
 	position: fixed;
-	background-color: white;
+	/*background-color: white;*/
 }
 #nav-bar{
 	padding: 5px;
-	box-shadow:0px 4px 4px 0px rgba(0,0,0,0.25);
 }
 .nav-item{
 	display: inline;
@@ -54,74 +69,128 @@ div{
 	font-size: 1.5em;
 	padding-left: 10px;
 	padding-right: 10px;
-
+	color: white;
 }
 .nav-item:hover{
 	cursor: pointer;
-	color: #880000;
+	/*color: #006600;*/
 }
-span.nav-text{
+
+#moonwalker{
+    font-family: 'moonwalkerTitle';
+    text-shadow: none;
 	font-weight: bold;
-	text-decoration: underline;
 }
+.nav-text{
+	user-select: none;
+	border: 15px solid transparent;
+	border-image: url("../images/border.png") 30 round;
+	background-color: #212121;
+    font-family: 'Digital';
+	color: white;
+	font-weight: bold;
+	transition: all 0.1s linear;
+	box-shadow:0px 4px 4px 0px rgba(0,0,0,0.25);
+}
+
+iframe{
+	user-select: none;
+	border: 30px solid transparent;
+	border-image: url("../images/border2.png") 180 round;
+	background-color: black;
+    font-family: 'Digital';
+	box-shadow:0px 4px 4px 0px rgba(0,0,0,0.25);	
+}
+
+.nav-text:hover {
+	color: #63ff72;
+	text-shadow: 3px 3px #006600;
+}
+
+.active > span.nav-text {
+	color: #00ff19;
+}
+
+
+
+/*--------------------------Story----------------------------------*/
 #one{
 	background-color: black;
-	/*padding: 40px;*/
-	background-image: url("../images/IMY320_2.PNG");
+    background-image: url("../images/back1.gif");
 	height: 100%;
 	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center center
+	background-position: center center;
+    background-attachment: fixed;
 	/*display: none;*/
 }
 #one>p{
-	background-color:rgba(170,170,170,0.4); 
-	/*height:100%;*/
-	color :black;
-	/*position:;*/
-	/*top:;*/
-	padding: 20px;	
-	margin:17% 13%;
-	/*margin:0 13%;*/
+	padding:20px 13%;
 }
+
+#img1{
+	display: block;
+	margin: 0 auto;
+	width: 60%;
+	border: 15px solid transparent;
+	border-image: url("../images/border2.png") 180 round;
+	background-color: #0b090b;
+}
+
+/*--------------------------Info----------------------------------*/
 #two{
 	background-color: black;
-	display: none;
+    background-image: url("../images/back1.gif");
+	height: 100%;
+	width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 	/*padding: 120px;*/
 }
 #two>p{
-	 margin:20px 13%;
+	 padding:20px 13%;
 }
 
-#img2{
-	margin-top: 40px;
-	background-image: url("../images/IMY320_1.PNG"); /*Should change to a gif with the*/
-	background-position: center center;
-	height: 500px;
-	/*width: 100%;*/
-	background-repeat: no-repeat;
-	background-size: contain;
+#two .row{
+	margin: 0 50px
 }
 
+.gunCont {
+	margin: 0 300px;
+	border: 26px solid transparent;
+	border-image: url("../images/border2.png") 180 round;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	background-image: url("../images/back3.png");
+	background-size: cover;
+}
+
+.gunCont > img {
+	display: block;
+	margin: 0 auto;
+	width: 60%;
+}
+
+
+/*--------------------------Trailer----------------------------------*/
 #three{
-	background-color:black; 
-	/*display: none;*/
-	background-image: url("../images/IMY320_2.PNG");
+	background-color:black;
+	padding-top: 85px;
+	background-image: url("../images/back1.gif");
 	height: 100%;
 	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center center
+	background-position: center center;
+    background-attachment: fixed;
 }
 #three>iframe{
     margin: 5% 19%;
     width: 62%;
-    height: 651px;
-}
-#four{
-	background-color:rgba(34,34,34,1); 
-	display: none;
+    height: 520px;
+	
 }
 
 ul{
@@ -132,4 +201,170 @@ p{
 	padding: 80px 20px;
 	text-align: justify;
 	color: white;
+}
+
+
+/*----------------------------Contact Stuff---------------------------------*/
+.contRow{
+    height: 300px;
+    margin-bottom: 2px;
+    border: solid 1px RGBA(0,0,0,50%);
+}
+
+.contactImage{
+    height: 200px;
+    
+}
+
+.contacts{
+    /*padding-left: 25%*/
+    padding: 10% 0;
+}
+.contactsReduceSize{
+    height: 100px;
+}
+
+#four{
+	background-color:rgba(34,34,34,1); 
+	display: none;
+	background-image: url("../images/back1.gif");
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+    background-attachment: fixed;
+}
+
+ul.contactDetails{
+    list-style: none;
+}
+
+.card {
+	display: inline-block;
+	border: 15px solid transparent;
+	border-image: url("../images/border2.png") 180 round;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	width: 270px;
+	margin: auto;
+	text-align: center;
+	background-color: #212121;
+	font-family: 'Digital';
+}
+
+.title {
+	color: grey;
+	font-size: 18px;
+}
+
+#four p {
+	padding: 0;
+	text-align: center;
+}
+
+#four h1 {
+	padding: 10px 0 0 0;
+}
+
+#profile1 {
+	width: 100%;
+	height: 250px;
+	background-image: url("../images/contacts/img_ray.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#profile2 {
+	width: 100%;
+	height: 250px;
+	background-image: url("../images/contacts/img_luyi.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#profile2 ~ h1{
+	font-size: 35px;
+	padding-top: 18px;
+}
+
+#profile3 {
+	width: 100%;
+	height: 250px;
+	background-image: url("../images/contacts/img_pieter.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+#profile4 {
+	width: 100%;
+	height: 250px;
+	background-image: url("../images/contacts/img_kinson.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/*--------------------------footer----------------------------------*/
+#footer{
+	border: 26px solid transparent;
+	border-image: url("../images/border2.png") 180 round;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	background-color: #212121;
+	height: 170px;
+	padding-top: 10px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.footerContainer{
+    height: 100px;
+    color: white
+}
+
+.footerLists{
+	padding-left: 0;
+    list-style: none;
+}
+
+.footRow{
+    height: 100%;
+	padding-top: 0px;
+}
+
+#social {
+	float: right;
+}
+
+#social > li {
+	display: inline-block;
+}
+
+svg {
+	padding: 10px;
+}
+
+path {
+	fill: #63ff72;
+	transition: all 0.1s linear;
+}
+
+svg:hover path {
+	fill: #ffff;
+}
+
+#footer h1 {
+	font-family: 'Digital';
+	text-shadow: 2px 2px #006600;
+	text-align: left;
+	color: white;
+	font-size: 42px;
+	padding-left: 30px;
+	margin-bottom: 0;
+}
+
+#footer .contactsReduceSize {
+	padding-top: 0px;
 }
